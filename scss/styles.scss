@@ -1,15 +1,4 @@
 // PARTIAL IMPORTS
-@import 'base/index';
-@import 'components/index';
 @import 'utilities/index';
-
-.container {
-  font-family: $primary-font;
-  font-size: 1rem;
-  text-align: center;
-  margin: 2rem;
-  .img--logo {
-    margin: 2rem 0;
-
-  }
-}
+@import 'components/index';
+@import 'base/index';

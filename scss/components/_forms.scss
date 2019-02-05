@@ -1,0 +1,19 @@
+
+    .form {
+      @include flex (column, center);
+
+    &__label--hidden {
+      display: none;
+    }
+
+    &__input {
+      border: none;
+      border-bottom: 5px solid $coral;
+      margin: 1.5rem 0.5rem;
+      padding: 1rem 0.5rem;
+      font-family: 'Helvetica' sans-serif;
+      font-weight: bolder;
+      font-size: .9rem;
+    }
+
+  }

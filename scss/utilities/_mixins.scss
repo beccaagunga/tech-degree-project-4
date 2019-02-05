@@ -1,0 +1,31 @@
+// "BUTTONS"
+@mixin btn ($c) {
+  border: none;
+  margin: .8rem 0;
+  padding: .8rem .8rem;
+  text-transform: uppercase;
+  color: white;
+  border-radius: $br;
+  background-color: $c;
+  font-weight: 500;
+}
+
+
+// GRID SYSTEM COLORS
+@mixin grid-col ($c) {
+  border: none;
+  margin: .5rem 0;
+  padding: 1rem;
+  font-weight: 500;
+  color: $gray;
+  background-color: $c;
+  border-radius: $br;
+
+}
+
+// FLEX
+@mixin flex ($flex-dir, $jus-con) {
+  display: flex;
+  justify-content: $jus-con;
+  flex-direction: $flex-dir;
+}

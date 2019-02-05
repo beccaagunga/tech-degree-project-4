@@ -1,0 +1,30 @@
+  .grid__col--3 .link {
+    @include flex (row, center);
+  }
+
+  .grid__row:nth-of-type(4) .grid__col--6 {
+    @include flex (column, center);
+  }
+
+  .img {
+    &--avatar {
+      margin: auto;
+      width: 45%;
+    }
+
+    &--frame {
+      width: 60%;
+      outline: 1px solid black;
+      outline-offset: 15px;
+      margin: auto;
+      padding: .3rem;
+    }
+  }
+
+  .grid__col--6 .img--avatar {
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+    width: 45%;
+
+  }

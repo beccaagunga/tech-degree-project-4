@@ -1,0 +1,84 @@
+// GRID COLORS
+  .grid__col--12.theme__colors {
+    @include  grid-col ($c: $main)
+    }
+
+  .grid__col--6.theme__colors {
+    @include grid-col ($c: $grid-6)
+  }
+
+  .grid__col--4.theme__colors {
+    @include grid-col ($c: $grid-4)
+  }
+
+  .grid__col--3.theme__colors {
+    @include grid-col ($c: $grid-3)
+  }
+
+  .grid__col--5.theme__colors {
+    @include grid-col ($c: $grid-5)
+  }
+
+  .grid__col--7.theme__colors {
+    @include grid-col ($c: $grid-7)
+  }
+
+  .grid__col--8.theme__colors {
+    @include grid-col ($c: $grid-8);
+  }
+
+// GRID LAYOUTS
+
+  .grid__col-- {
+
+    &12.theme__colors {
+    margin-bottom: 3rem;
+    }
+
+    &6.theme__colors:last-child {
+      margin-bottom: 3rem;
+    }
+
+    &4.theme__colors:last-child {
+      margin-bottom: 3rem;
+    }
+
+    &3.theme__colors:last-child {
+      margin-bottom: 3rem;
+    }
+
+    &7.theme__colors {
+    margin-bottom: 3rem;
+    }
+
+    &4.theme__colors:nth-of-type(4) {
+    margin-bottom: 3rem;
+    }
+
+  }
+
+  // NAV
+  .grid__col--9 {
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 3rem;
+    & li {
+      margin: 2rem;
+      list-style-type: none;
+      line-height: 1.2
+    }
+  }
+
+// "BUTTONS"
+  .grid__col--12 {
+    @include flex (column, center);
+
+  }
+
+
+  .container {
+    @include flex (column, center);
+    font-weight: 300;
+    margin: 2rem;
+
+  }

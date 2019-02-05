@@ -1,10 +1,40 @@
-// COLOR
-$color-primary: 'rgb(90, 219, 126)';
-$color-secondary: 'rgb(95, 216, 219)';
+
 
 // FONT
 $primary-font: 'Helvetica Neue';
 
+// FONT WEIGHTS
+$light-font: 100;
+$heavy-font: 700;
+
 // BREAKPOINTS
-$break-s: 'max-width(480px)';
-$break-l: 'max-width(1400px)';
+$break-s: 'min-width(480px)';
+$break-l: 'min-width(1400px)';
+
+// COLORS
+$coral: rgb(95, 216, 219);
+$green: rgb(80, 213, 161);
+$gray: rgb(88, 88, 88);
+$emerald: rgb(126, 201, 137);
+$red: rgb(214, 123, 124);
+$orange: rgb(237, 127, 95);
+$lilac: rbg(142, 125, 188);
+
+// GRID COLORS
+$grid-6: #40ABC9;
+$grid-4: #7EE6FD;
+$grid-3: #DEB2EE;
+$grid-5: #87D9A0;
+$grid-7: #EC9FA3;
+$grid-8: #FC9F85;
+
+// BUTTON COLORS
+$main: rgb(95, 216, 219);
+$success: rgb(126, 201, 137);
+$error: rgb(214, 123, 124);
+$warning: rgb(237, 127, 95);
+$info: rgb(177, 124, 201);
+
+
+// BORDERS
+$br: 8px;

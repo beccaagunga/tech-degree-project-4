@@ -2,7 +2,8 @@
   .grid__col--3 .link {
     @include flex (row, center);
     @media (min-width: $break-m) {
-      margin: 1.2rem 0.5rem;
+      float: left;
+      margin: .5rem 2rem;
     }
   }
 
@@ -17,7 +18,7 @@
       }
     &--frame {
       outline: 1px solid black;
-      outline-offset: 15px;
+      outline-offset: 5px;
       margin: auto;
       padding: 1rem 1rem;
       width: 80%;

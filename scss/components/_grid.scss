@@ -3,7 +3,7 @@
     font-weight: 300;
     margin: 2rem;
     @media (min-width: $break-m) {
-      margin: 2rem 5rem;
+      margin: 2rem 3rem;
     }
   }
 
@@ -30,37 +30,88 @@
     @include flex (column, center);
     @media (min-width: $break-m) {
     @include flex (row, space-between);
+    margin: 0 3rem;
     }
   }
 
 // GRID COLORS
   .grid__col--12.theme__colors {
-    @include  grid-col ($c: $main)
+    @include  grid-col ($c: $main);
+    @media (min-width: $break-m) {
+      width: 100%;
+      margin: auto;
+
+    }
   }
 
   .grid__col--6.theme__colors {
-    @include grid-col ($c: $grid-6)
+    @include grid-col ($c: $grid-6);
+    @media (min-width: $break-m) {
+      width: 46.5%;
+      display: inline-block;
+      position: relative;
+      margin-right: 1.5rem;
     }
+  }
 
   .grid__col--4.theme__colors {
-    @include grid-col ($c: $grid-4)
+    @include grid-col ($c: $grid-4);
+    @media (min-width: $break-m) {
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      margin-right: 1.5rem;
+    }
   }
 
   .grid__col--3.theme__colors {
-    @include grid-col ($c: $grid-3)
+    @include grid-col ($c: $grid-3);
+    @media (min-width: $break-m) {
+      width: 21.5%;
+      display: inline-block;
+      position: relative;
+      margin-right: 1.5rem;
+    }
   }
 
   .grid__col--5.theme__colors {
-    @include grid-col ($c: $grid-5)
+    @include grid-col ($c: $grid-5);
+    @media (min-width: $break-m) {
+      width: 30%;
+      display: inline-block;
+      position: relative;
+      margin-right: 1.5rem;
+    }
   }
 
-  .grid__col--7.theme__colors {
-    @include grid-col ($c: $grid-7)
+    .grid__col--7 {
+    &.theme__colors {
+      @include grid-col ($c: $grid-7);
+      @media (min-width: $break-m) {
+        width: 63%;
+        display: inline-block;
+        position: relative;
+        margin-right: 1.5rem;
+      }
+      &.centered {
+        @media (min-width: $break-m) {
+        margin: 0 5rem;
+        width: 80%;
+      }
+    }
   }
+}
 
   .grid__col--8.theme__colors {
     @include grid-col ($c: $grid-8);
+    @media (min-width: $break-m) {
+      width: 64%;
+      display: inline-block;
+      position: relative;
+      margin-right: 1.5rem;
+    }
   }
+
 
 // GRID LAYOUTS
 
@@ -102,7 +153,7 @@
   }
 
 // FORM
-    .grid__col--4 {
+    .grid__col--4 .form {
     @media (min-width: $break-m) {
       float: right;
       width: 30%;
@@ -145,16 +196,10 @@
       line-height: 1.2;
       @media (min-width: $break-m) {
         display: inline-block;
-        margin: 0 .5rem;
+        margin: 0 .3rem;
         padding: .5rem 0;
       }
     }
   }
 
-// LOGO
-  .grid__col--3 {
-    @media (min-width: $break-m) {
-    float: left;
-    margin-right: 2rem;
-    }
-  }
+// GRID SYSTEM

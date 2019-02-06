@@ -1,11 +1,46 @@
+  .container {
+    @include flex (column, center);
+    font-weight: 300;
+    margin: 2rem;
+    @media (min-width: $break-m) {
+      margin: 2rem 5rem;
+    }
+  }
+
+
+  .grid_row {
+    @include flex (column, center);
+    margin-bottom: 1rem;
+    @media (min-width: $break-m) {
+      @include flex (row, center);
+    }
+  }
+
+// TYPOGRAPHY SECTION
+  .grid__row:nth-of-type(2) .grid__col--12 {
+    padding: 0;
+    margin: 2rem 0;
+    @media (min-width: $break-m) {
+      margin: 4rem 0;
+    }
+  }
+
+// "BUTTONS"
+  .grid__col--12 {
+    @include flex (column, center);
+    @media (min-width: $break-m) {
+    @include flex (row, space-between);
+    }
+  }
+
 // GRID COLORS
   .grid__col--12.theme__colors {
     @include  grid-col ($c: $main)
-    }
+  }
 
   .grid__col--6.theme__colors {
     @include grid-col ($c: $grid-6)
-  }
+    }
 
   .grid__col--4.theme__colors {
     @include grid-col ($c: $grid-4)
@@ -54,31 +89,72 @@
     &4.theme__colors:nth-of-type(4) {
     margin-bottom: 3rem;
     }
-
   }
 
-  // NAV
+
+
+// TYPOGRAPHY SECTION
+    .grid__col--8 {
+    @media (min-width: $break-m) {
+      float: left;
+      width: 60%;
+    }
+  }
+
+// FORM
+    .grid__col--4 {
+    @media (min-width: $break-m) {
+      float: right;
+      width: 30%;
+    }
+  }
+
+// FRAME AND AVATAR
+  .grid__row:nth-of-type(4) {
+    @include flex (column, center);
+    @media (min-width: $break-m) {
+    @include flex (row, center);
+    }
+  }
+
+  .grid__row:nth-of-type(4) .img--frame {
+    @media (min-width: $break-m) {
+    flex: 70%;
+    margin: 0;
+    }
+  }
+
+  .grid__row:nth-of-type(4) .img--avatar {
+    @media (min-width: $break-m) {
+    flex: 25%;
+    margin: -3rem;
+  }
+}
+
+
+// NAV
   .grid__col--9 {
     text-align: center;
     padding: 1em;
     margin-bottom: 3rem;
+    @include flex (column, center);
+
     & li {
       margin: 2rem;
       list-style-type: none;
-      line-height: 1.2
+      line-height: 1.2;
+      @media (min-width: $break-m) {
+        display: inline-block;
+        margin: 0 .5rem;
+        padding: .5rem 0;
+      }
     }
   }
 
-// "BUTTONS"
-  .grid__col--12 {
-    @include flex (column, center);
-
-  }
-
-
-  .container {
-    @include flex (column, center);
-    font-weight: 300;
-    margin: 2rem;
-
+// LOGO
+  .grid__col--3 {
+    @media (min-width: $break-m) {
+    float: left;
+    margin-right: 2rem;
+    }
   }

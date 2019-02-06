@@ -43,4 +43,8 @@
     padding: 1rem 8rem;
     margin: 2rem -8rem;
     border-radius: $br;
+    @media (min-width: $break-m) {
+      padding: .4rem;
+      margin: 0;
+    }
   }

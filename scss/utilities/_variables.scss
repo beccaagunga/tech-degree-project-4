@@ -8,8 +8,8 @@ $light-font: 100;
 $heavy-font: 700;
 
 // BREAKPOINTS
-$break-s: 'min-width(480px)';
-$break-l: 'min-width(1400px)';
+$break-m: '768px';
+$break-l: '1024px';
 
 // COLORS
 $coral: rgb(95, 216, 219);
@@ -38,3 +38,6 @@ $info: rgb(177, 124, 201);
 
 // BORDERS
 $br: 8px;
+
+// LAYOUT
+$gutter: 10px;

@@ -2,7 +2,7 @@
 @mixin btn ($c) {
   border: none;
   margin: .8rem 0;
-  padding: .8rem .8rem;
+  padding: .8rem 1.5rem;
   text-transform: uppercase;
   color: white;
   border-radius: $br;
@@ -20,6 +20,9 @@
   color: $gray;
   background-color: $c;
   border-radius: $br;
+  @media (min-width: $break-m) {
+    text-align: center;
+  }
 
 }
 

@@ -16,7 +16,7 @@
       font-weight: bolder;
       font-size: .9rem;
       }
-      @media (min-width: $break-m) {
+      @include desktop {
         margin-left: 1rem;
       }
     }

@@ -32,3 +32,10 @@
   justify-content: $jus-con;
   flex-direction: $flex-dir;
 }
+
+// MEDIA QUERY
+@mixin desktop {
+  @media (min-width: #{$break-m}) {
+    @content;
+  }
+}

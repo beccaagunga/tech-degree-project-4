@@ -238,7 +238,8 @@
 }
 @media (min-width: 768px) {
   .grid__col--7.theme__colors.centered {
-    width: 100%;
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -308,6 +309,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    clear: both;
   }
 }
 
@@ -950,18 +952,19 @@
 
 .nav a {
   color: #585858;
+  padding: 1rem 0.4rem;
 }
 
 .nav a:hover {
   background-color: #5fd8db;
   color: white;
-  padding: 1rem 8rem;
+  padding: 1rem 0.4rem;
   margin: 2rem -8rem;
   border-radius: 8px;
 }
 @media (min-width: 768px) {
   .nav a:hover {
-    padding: 0.4rem;
+    padding: 1rem 0.4rem;
     margin: 0;
   }
 }

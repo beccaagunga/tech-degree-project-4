@@ -8,7 +8,6 @@
     font-weight: $light-font;
     margin: 2rem 1.5rem;
   }
-
 }
 
   .blockquote {
@@ -33,6 +32,7 @@
 // NAV LINKS
   .nav a {
     color: $gray;
+    padding: 1rem .4rem;
   }
 
 
@@ -40,11 +40,11 @@
   .nav a:hover {
     background-color: $coral;
     color: white;
-    padding: 1rem 8rem;
+    padding: 1rem .4rem;
     margin: 2rem -8rem;
     border-radius: $br;
-    @media (min-width: $break-m) {
-      padding: .4rem;
+    @include desktop {
+      padding: 1rem .4rem;
       margin: 0;
     }
   }

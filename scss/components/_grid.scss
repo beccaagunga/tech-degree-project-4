@@ -12,7 +12,7 @@
     @include flex (column, center);
     margin-bottom: 1rem;
     @media (min-width: $break-m) {
-      @include flex (row, center);
+    @include flex (row, center);
     }
   }
 
@@ -28,9 +28,10 @@
 // "BUTTONS"
   .grid__col--12 {
     @include flex (column, center);
+    padding: 1rem 1rem;
+    margin: .5rem 1rem;
     @media (min-width: $break-m) {
-    @include flex (row, space-between);
-    margin: 0 3rem;
+    @include flex (row, space-around);
     }
   }
 
@@ -38,49 +39,38 @@
   .grid__col--12.theme__colors {
     @include  grid-col ($c: $main);
     @media (min-width: $break-m) {
-      width: 100%;
-      margin: auto;
-
     }
   }
 
   .grid__col--6.theme__colors {
     @include grid-col ($c: $grid-6);
     @media (min-width: $break-m) {
-      width: 46.5%;
-      display: inline-block;
-      position: relative;
-      margin-right: 1.5rem;
+      max-height: 50px;
+      margin-right: 1rem;
     }
   }
 
   .grid__col--4.theme__colors {
     @include grid-col ($c: $grid-4);
     @media (min-width: $break-m) {
-      width: 30%;
-      display: inline-block;
-      position: relative;
-      margin-right: 1.5rem;
+      max-height: 50px;
+      margin-right: 1rem;
     }
   }
 
   .grid__col--3.theme__colors {
     @include grid-col ($c: $grid-3);
     @media (min-width: $break-m) {
-      width: 21.5%;
-      display: inline-block;
-      position: relative;
-      margin-right: 1.5rem;
+      max-height: 50px;
+      margin-right: 1rem;
     }
   }
 
   .grid__col--5.theme__colors {
     @include grid-col ($c: $grid-5);
     @media (min-width: $break-m) {
-      width: 30%;
-      display: inline-block;
-      position: relative;
-      margin-right: 1.5rem;
+      max-height: 50px;
+      margin-right: 1rem;
     }
   }
 
@@ -88,15 +78,12 @@
     &.theme__colors {
       @include grid-col ($c: $grid-7);
       @media (min-width: $break-m) {
-        width: 63%;
-        display: inline-block;
-        position: relative;
-        margin-right: 1.5rem;
+
       }
       &.centered {
         @media (min-width: $break-m) {
-        margin: 0 5rem;
-        width: 80%;
+        width: 100%;
+
       }
     }
   }
@@ -105,10 +92,8 @@
   .grid__col--8.theme__colors {
     @include grid-col ($c: $grid-8);
     @media (min-width: $break-m) {
-      width: 64%;
-      display: inline-block;
-      position: relative;
-      margin-right: 1.5rem;
+      max-height: 50px;
+      margin-right: 1rem;
     }
   }
 
@@ -142,21 +127,21 @@
     }
   }
 
-
-
 // TYPOGRAPHY SECTION
-    .grid__col--8 {
+    .grid__col--8 .card {
     @media (min-width: $break-m) {
+      margin-right: 0;
+      width: 100%;
       float: left;
-      width: 60%;
     }
   }
 
 // FORM
-    .grid__col--4 .form {
+    .grid__col--4 {
     @media (min-width: $break-m) {
       float: right;
-      width: 30%;
+      margin: 0;
+      width: 100%;
     }
   }
 
@@ -167,21 +152,6 @@
     @include flex (row, center);
     }
   }
-
-  .grid__row:nth-of-type(4) .img--frame {
-    @media (min-width: $break-m) {
-    flex: 70%;
-    margin: 0;
-    }
-  }
-
-  .grid__row:nth-of-type(4) .img--avatar {
-    @media (min-width: $break-m) {
-    flex: 25%;
-    margin: -3rem;
-  }
-}
-
 
 // NAV
   .grid__col--9 {
@@ -203,3 +173,39 @@
   }
 
 // GRID SYSTEM
+    @media (min-width: $break-m) {
+    @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width);
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+      .grid__col--#{$i} {
+        width: percentage( $target / $context );
+      }
+      .grid__row:nth-of-type(1) {
+         @include flex (row, center);
+       }
+
+      .grid__row:nth-of-type(4) {
+         @include flex (row, center);
+       }
+
+      .grid__row:nth-of-type(7) {
+      @include flex (row, center);
+      }
+
+      .grid__row:nth-of-type(8) {
+       @include flex (row, center);
+     }
+
+      .grid__row:nth-of-type(9) {
+       @include flex (row, center);
+     }
+
+      .grid__row:nth-of-type(10) {
+     @include flex (row, center);
+     }
+
+      .grid__row:nth-of-type(11) {
+      @include flex (row, center);
+    }
+   }
+  }

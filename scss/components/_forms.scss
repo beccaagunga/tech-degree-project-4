@@ -1,7 +1,7 @@
 
     .form {
       @include flex (column, center);
-      width: 100%;
+
 
     &__label--hidden {
       display: none;
@@ -17,6 +17,6 @@
       font-size: .9rem;
       }
       @media (min-width: $break-m) {
-      margin-right: .5rem;
+        margin-left: 1rem;
+      }
     }
-  }
